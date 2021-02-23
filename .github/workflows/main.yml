@@ -25,7 +25,7 @@ jobs:
       run: npm run prod
     - name: Prepare production
       run: |
-        git config --global user.email "perkinbox@gmail.com"
+        git config --global user.email "${{secrets.EMAIL}}"
         git config --global user.name "Andrés Smerkin"
         git add build_production -f && git commit -m "Build for deploy"
     - name: Deploy website
