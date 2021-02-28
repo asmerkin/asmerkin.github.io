@@ -10,6 +10,8 @@
         <script defer src="{{ mix('js/main.js', 'assets/build') }}"></script>
     </head>
     <body class="text-gray-900 font-sans antialiased">
+        @include('_partials.header')
         @yield('body')
+        @include('_partials.footer')
     </body>
 </html>
