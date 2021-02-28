@@ -1,5 +1,5 @@
 --- 
-title: Why to make Gnome look like MacOS?
+title: Why not to make Gnome look like MacOS?
 date: 2021-02-28
 section: content
 --- 
