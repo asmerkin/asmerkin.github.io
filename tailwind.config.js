@@ -1,6 +1,6 @@
 module.exports = {
   darkMode: 'class',
-  purge: [
+  content: [
     'source/**/*.blade.php',
     'source/**/*.md',
     'source/**/*.html',
