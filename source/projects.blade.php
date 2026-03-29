@@ -1,13 +1,13 @@
 @extends('_layouts.main')
 
 @section('body')
-<div class="max-w-2xl mx-auto px-6">
+<div class="max-w-3xl mx-auto px-6">
 
-    <section class="pt-20 pb-16 sm:pt-28 sm:pb-20 fade-up">
-        <h1 class="font-display text-4xl sm:text-5xl text-ink-900 dark:text-ink-50 tracking-tight leading-[1.1]">
+    <section class="pt-24 pb-16 sm:pt-32 sm:pb-24 fade-up">
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-ink-900 dark:text-ink-50 tracking-tight leading-[1.1]">
             Projects
         </h1>
-        <p class="text-lg text-ink-600 dark:text-ink-300 leading-relaxed max-w-xl mt-4">
+        <p class="text-xl text-ink-600 dark:text-ink-300 leading-relaxed max-w-xl mt-4">
             Things I've built and keep building.
         </p>
     </section>
@@ -19,7 +19,7 @@
             <div class="flex items-start justify-between gap-4">
                 <div>
                     <div class="flex items-center gap-3 mb-2">
-                        <h2 class="font-display text-2xl text-ink-900 dark:text-ink-50 tracking-tight">Finerdy</h2>
+                        <h2 class="font-display text-2xl font-bold text-ink-900 dark:text-ink-50 tracking-tight">Finerdy</h2>
                         <span class="badge">SaaS</span>
                     </div>
                     <p class="font-mono text-xs text-ink-400 dark:text-ink-500 tracking-wide mb-3">finerdy.app</p>
@@ -46,7 +46,7 @@
             <div class="flex items-start justify-between gap-4">
                 <div>
                     <div class="flex items-center gap-3 mb-2">
-                        <h2 class="font-display text-2xl text-ink-900 dark:text-ink-50 tracking-tight">Sudoku</h2>
+                        <h2 class="font-display text-2xl font-bold text-ink-900 dark:text-ink-50 tracking-tight">Sudoku</h2>
                         <span class="badge">Game</span>
                     </div>
                     <p class="font-mono text-xs text-ink-400 dark:text-ink-500 tracking-wide mb-3">andressmerkin.com/sudoku</p>

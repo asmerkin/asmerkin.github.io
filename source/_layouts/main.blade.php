@@ -18,6 +18,7 @@
         </script>
         <script defer src="{{ vite('source/_assets/js/main.js') }}"></script>
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/liquid.min.js"></script>
         {!! vite_refresh() !!}
     </head>
     <body class="grain bg-ink-50 dark:bg-ink-950 text-ink-800 dark:text-ink-200 antialiased min-h-screen flex flex-col">

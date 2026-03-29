@@ -20,6 +20,7 @@ In this example, we will create a customizable page that you can replicate N tim
 
 Create a new page within the templates directory, and name it `page.customizable.default.liquid`. The idea behind this is that you can replicate this page to create new pages like `page.customizable.aboutus.liquid` or `page.customizable.ourteam.liquid`. In our example, the content should be pretty straightforward.
 
+@verbatim
 ```liquid
 <!-- templates/page.customizable.default.liquid -->
 
@@ -28,12 +29,14 @@ This section name will change according to the page we are creating.
 {% endcomment %}
 {% section 'page-customizable-default.liquid' %}
 ```
+@endverbatim
 
 ### 2. Create a customizable section
 
 Once we have our customizable page, we can create the customizable section that we just attached in our example, so for this example just create your `sections/page-customizable-default.liquid`. For now we will add very basic content.
 
 
+@verbatim
 ```liquid
 <!-- sections/page-customizable-default.liquid -->
 
@@ -51,6 +54,7 @@ Once we have our customizable page, we can create the customizable section that 
 }
 {% endschema %}
 ```
+@endverbatim
 
 ### 3. Let's add some customizable blocks
 
@@ -58,6 +62,7 @@ For this third step, we will create the building blocks for our customiable page
 
 For our example, let's think about creating some sort of text + image block. So the first step is to adjust our section to have a block that can display an image plus some text. For the sake of the example, we will keep it very basic.
 
+@verbatim
 ```liquid
 <!-- sections/page-customizable-default.liquid -->
 
@@ -85,9 +90,11 @@ For our example, let's think about creating some sort of text + image block. So 
 }
 {% endschema %}
 ```
+@endverbatim
 
 And finally we have our block in a new snippet. For this example, the snippet is named `snippets/page-customizable-text_image.liquid`.
 
+@verbatim
 ```liquid
 <!-- sections/page-customizable-text_image.liquid -->
 
@@ -101,6 +108,7 @@ can be as complex as you want.
     <div>{{ settings.content }}</div>
 </div>
 ```
+@endverbatim
 
 ## How this all works together
 

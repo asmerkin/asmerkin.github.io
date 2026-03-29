@@ -3,7 +3,7 @@
 @section('body')
 <div id="reading-progress" class="reading-progress" style="width: 0%"></div>
 
-<article class="max-w-2xl mx-auto px-6 pt-12 pb-24 sm:pt-20">
+<article class="max-w-3xl mx-auto px-6 pt-12 pb-32 sm:pt-20">
     <header class="mb-14 fade-up">
         <a href="/" class="inline-flex items-center gap-1.5 font-mono text-xs text-ink-400 dark:text-ink-500 hover:text-amber-600 dark:hover:text-amber-400 transition-colors tracking-wide uppercase mb-8">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -16,7 +16,7 @@
             <span class="badge mb-4 block w-fit">{{ $page->category }}</span>
         @endif
 
-        <h1 class="font-display text-4xl sm:text-5xl text-ink-900 dark:text-ink-50 tracking-tight leading-[1.1]">
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-ink-900 dark:text-ink-50 tracking-tight leading-[1.1]">
             {{ $page->title }}
         </h1>
 

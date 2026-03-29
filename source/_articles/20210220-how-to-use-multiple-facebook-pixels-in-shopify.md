@@ -13,10 +13,12 @@ Let's say that your Facebook pixel ID is `1234567890`, and you also want to trac
 
 Then, you need to replace your `{{ content_for_header }}` tag by the following code:
 
+@verbatim
 ```liquid
 {% capture modified_header %}{{ content_for_header }}{% endcapture %}
 {% modified_header | replace: '["1234567890"]', '["1234567890", "1111111111"]'%}
 ```
+@endverbatim
 ### Long explanation
 It seems that the Shopify Pixel integration is capable of tracking multiple Facebook Pixels, but by default, the interface allows you to add a single Pixel. We will modify the underlying javascript injection to add a second pixel.
 

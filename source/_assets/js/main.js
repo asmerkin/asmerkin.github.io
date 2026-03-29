@@ -28,12 +28,20 @@ if (toggle) {
     });
 }
 
-// Initialize highlight.js when loaded
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize highlight.js — retry until the CDN script is loaded
+function initHighlight() {
     if (typeof hljs !== 'undefined') {
         hljs.highlightAll();
+        syncHljsTheme(document.documentElement.classList.contains('dark'));
+    } else {
+        setTimeout(initHighlight, 50);
     }
-});
+}
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHighlight);
+} else {
+    initHighlight();
+}
 
 // Reading progress bar (article pages only)
 const progressBar = document.getElementById('reading-progress');

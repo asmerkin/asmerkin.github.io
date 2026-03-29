@@ -1,5 +1,5 @@
 <footer class="border-t border-ink-200/60 dark:border-ink-800/60">
-    <div class="max-w-2xl mx-auto px-6 py-10">
+    <div class="max-w-3xl mx-auto px-6 py-10">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p class="font-mono text-xs text-ink-400 dark:text-ink-500 tracking-wide">
                 &copy; {{ date('Y') }} Andrés Smerkin

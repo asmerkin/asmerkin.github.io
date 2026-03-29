@@ -1,5 +1,5 @@
 <header class="sticky top-0 z-50 bg-ink-50/90 dark:bg-ink-950/90 backdrop-blur-md">
-    <div class="max-w-2xl mx-auto px-6 py-5 flex items-center justify-between">
+    <div class="max-w-3xl mx-auto px-6 py-5 flex items-center justify-between">
         <a href="/" class="flex items-center gap-3 group" aria-label="Home">
             <img
                 src="https://www.gravatar.com/avatar/{{ $page->avatar }}?s=80"

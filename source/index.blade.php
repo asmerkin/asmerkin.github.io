@@ -1,10 +1,10 @@
 @extends('_layouts.main')
 
 @section('body')
-<div class="max-w-2xl mx-auto px-6">
+<div class="max-w-3xl mx-auto px-6">
 
     {{-- Hero --}}
-    <section class="pt-20 pb-16 sm:pt-28 sm:pb-20 fade-up">
+    <section class="pt-24 pb-16 sm:pt-32 sm:pb-24 fade-up">
         <div class="flex items-start gap-6 mb-8">
             <img
                 src="https://www.gravatar.com/avatar/{{ $page->avatar }}?s=200"
@@ -12,7 +12,7 @@
                 class="w-20 h-20 sm:w-24 sm:h-24 rounded-full ring-2 ring-ink-200 dark:ring-ink-800 shadow-lg flex-shrink-0"
             >
             <div>
-                <h1 class="font-display text-4xl sm:text-5xl text-ink-900 dark:text-ink-50 tracking-tight leading-[1.1]">
+                <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-ink-900 dark:text-ink-50 tracking-tight leading-[1.1]">
                     Andrés Smerkin
                 </h1>
                 <p class="font-mono text-sm text-ink-500 dark:text-ink-400 mt-2 tracking-wide">
@@ -20,7 +20,7 @@
                 </p>
             </div>
         </div>
-        <p class="text-lg text-ink-600 dark:text-ink-300 leading-relaxed max-w-xl">
+        <p class="text-xl text-ink-600 dark:text-ink-300 leading-relaxed max-w-xl">
             Writing about software, open source, and the things I learn along the way.
         </p>
 
@@ -40,7 +40,7 @@
     </div>
 
     {{-- Articles --}}
-    <section class="pt-2 pb-24 fade-up fade-up-delay-2">
+    <section class="pt-2 pb-32 fade-up fade-up-delay-2">
         @foreach ($articles->sortByDesc('date') as $article)
             <a href="{{ $article->getPath() }}" class="article-card">
                 <div class="flex items-center gap-3 mb-2">
@@ -54,11 +54,11 @@
                         <span class="font-mono text-xs text-ink-400 dark:text-ink-500">es</span>
                     @endif
                 </div>
-                <h3 class="font-display text-2xl sm:text-[1.65rem] text-ink-900 dark:text-ink-50 tracking-tight leading-snug group-hover:text-amber-600 transition-colors">
+                <h3 class="font-display text-2xl sm:text-3xl font-bold text-ink-900 dark:text-ink-50 tracking-tight leading-snug group-hover:text-amber-600 transition-colors">
                     {{ $article->title }}
                 </h3>
                 @if ($article->excerpt)
-                    <p class="text-ink-500 dark:text-ink-400 mt-2 text-[0.95rem] leading-relaxed line-clamp-2">
+                    <p class="text-ink-500 dark:text-ink-400 mt-2 text-base leading-relaxed line-clamp-2">
                         {{ $article->excerpt }}
                     </p>
                 @endif
