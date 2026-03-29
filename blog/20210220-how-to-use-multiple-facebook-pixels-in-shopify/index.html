@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://andressmerkin.com/blog/20210220-how-to-use-multiple-facebook-pixels-in-shopify">
+        <meta name="description" content="Website description.">
+        <title>How to Use Multiple Facebook Pixels in Shopify</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="/assets/build/assets/main-TsDAtdyH.css">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css">
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" disabled>
+        <script>
+            if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        </script>
+        <script defer src="/assets/build/assets/main-9z_vYsVt.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+        
+    </head>
+    <body class="grain bg-ink-50 dark:bg-ink-950 text-ink-800 dark:text-ink-200 antialiased min-h-screen flex flex-col">
+        <header class="sticky top-0 z-50 bg-ink-50/90 dark:bg-ink-950/90 backdrop-blur-md">
+    <div class="max-w-2xl mx-auto px-6 py-5 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group" aria-label="Home">
+            <img
+                src="https://www.gravatar.com/avatar/e51e26e998269c10eb92bf36e9cd61d5?s=80"
+                alt="Andrés Smerkin"
+                class="w-9 h-9 rounded-full ring-2 ring-ink-200 dark:ring-ink-700 group-hover:ring-amber-400 transition-all duration-300"
+            >
+            <span class="font-display text-xl text-ink-900 dark:text-ink-50 tracking-tight">Andrés Smerkin</span>
+        </a>
+        <nav class="flex items-center gap-5" aria-label="Main navigation">
+            <a href="/" class="nav-link">blog</a>
+            <a href="/projects" class="nav-link">projects</a>
+            <button id="dark-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
+                </svg>
+                <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
+                </svg>
+            </button>
+        </nav>
+    </div>
+    <div class="h-px bg-ink-200/60 dark:bg-ink-800/60"></div>
+</header>
+        <main class="flex-1">
+            <div id="reading-progress" class="reading-progress" style="width: 0%"></div>
+
+<article class="max-w-2xl mx-auto px-6 pt-12 pb-24 sm:pt-20">
+    <header class="mb-14 fade-up">
+        <a href="/" class="inline-flex items-center gap-1.5 font-mono text-xs text-ink-400 dark:text-ink-500 hover:text-amber-600 dark:hover:text-amber-400 transition-colors tracking-wide uppercase mb-8">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+            back
+        </a>
+
+        
+        <h1 class="font-display text-4xl sm:text-5xl text-ink-900 dark:text-ink-50 tracking-tight leading-[1.1]">
+            How to Use Multiple Facebook Pixels in Shopify
+        </h1>
+
+        <div class="flex items-center gap-3 mt-6 font-mono text-sm text-ink-400 dark:text-ink-500 tracking-wide">
+            <img
+                src="https://www.gravatar.com/avatar/e51e26e998269c10eb92bf36e9cd61d5?s=48"
+                alt="Andrés Smerkin"
+                class="w-6 h-6 rounded-full"
+            >
+            <span>Andrés Smerkin</span>
+            <span class="text-ink-300 dark:text-ink-700">/</span>
+            <time>Feb 20, 2021</time>
+        </div>
+    </header>
+
+    <div class="prose prose-lg dark:prose-invert max-w-none fade-up fade-up-delay-1">
+        <blockquote>
+  <p>Be aware that tricks are not officially supported by Shopify, and they might break in any moment. Please use them at your own risk.</p>
+</blockquote>
+
+<p>Sometimes you will find the need to add more than one Facebook Pixel to your store. This is something that can be accomplished in many ways, like using an app or pasting the Facebook code straight into the theme files, but here's an approach that works very well in Stores, and if you have a <strong>Plus</strong> store, it also works very well in checkouts.</p>
+
+<p>Let's say that your Facebook pixel ID is <code>1234567890</code>, and you also want to track to <code>1111111111</code>, so you can do this slight modification. The first step is to add your first Facebook pixel via the Shopify regular Process, going to <strong>Online Store > Preferences > Facebook Pixel</strong>.</p>
+
+<p>Then, you need to replace your <code>{{ content_for_header }}</code> tag by the following code:</p>
+
+<pre><code class="language-liquid">{% capture modified_header %}{{ content_for_header }}{% endcapture %}
+{% modified_header | replace: '["1234567890"]', '["1234567890", "1111111111"]'%}
+</code></pre>
+
+<h3>Long explanation</h3>
+
+<p>It seems that the Shopify Pixel integration is capable of tracking multiple Facebook Pixels, but by default, the interface allows you to add a single Pixel. We will modify the underlying javascript injection to add a second pixel.</p>
+
+<p>What this does is replace the current pixel with the two pixels you need to add. One of those pixels being the default one, plus the extra pixel we add. Note that you can do this and add more than two pixels.</p>
+
+<blockquote>
+  <p>Be aware that this will only place two pixels to the store, but not to the checkout. If you want to apply this behavior to checkout, you must be a Plus Merchant with access to edit the checkout template.</p>
+</blockquote>
+    </div>
+
+    
+    <footer class="mt-20 pt-8 border-t border-ink-200 dark:border-ink-800 fade-up fade-up-delay-2">
+        <a href="/" class="inline-flex items-center gap-2 font-mono text-sm text-ink-400 dark:text-ink-500 hover:text-amber-600 dark:hover:text-amber-400 transition-colors tracking-wide">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+            All articles
+        </a>
+    </footer>
+</article>
+        </main>
+        <footer class="border-t border-ink-200/60 dark:border-ink-800/60">
+    <div class="max-w-2xl mx-auto px-6 py-10">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="font-mono text-xs text-ink-400 dark:text-ink-500 tracking-wide">
+                &copy; 2026 Andrés Smerkin
+            </p>
+            <div class="flex items-center gap-4">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" class="font-mono text-xs text-ink-400 dark:text-ink-500 hover:text-amber-600 dark:hover:text-amber-400 transition-colors tracking-wide">
+                    CC BY 4.0
+                </a>
+                <span class="text-ink-300 dark:text-ink-700">|</span>
+                <a href="https://github.com/asmerkin" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-ink-400 dark:text-ink-500 hover:text-amber-600 dark:hover:text-amber-400 transition-colors tracking-wide">
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+    </body>
+</html>

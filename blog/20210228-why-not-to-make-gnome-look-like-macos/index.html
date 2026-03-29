@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://andressmerkin.com/blog/20210228-why-not-to-make-gnome-look-like-macos">
+        <meta name="description" content="Website description.">
+        <title>Why not to make Gnome look like MacOS?</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="/assets/build/assets/main-TsDAtdyH.css">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css">
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" disabled>
+        <script>
+            if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        </script>
+        <script defer src="/assets/build/assets/main-9z_vYsVt.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+        
+    </head>
+    <body class="grain bg-ink-50 dark:bg-ink-950 text-ink-800 dark:text-ink-200 antialiased min-h-screen flex flex-col">
+        <header class="sticky top-0 z-50 bg-ink-50/90 dark:bg-ink-950/90 backdrop-blur-md">
+    <div class="max-w-2xl mx-auto px-6 py-5 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3 group" aria-label="Home">
+            <img
+                src="https://www.gravatar.com/avatar/e51e26e998269c10eb92bf36e9cd61d5?s=80"
+                alt="Andrés Smerkin"
+                class="w-9 h-9 rounded-full ring-2 ring-ink-200 dark:ring-ink-700 group-hover:ring-amber-400 transition-all duration-300"
+            >
+            <span class="font-display text-xl text-ink-900 dark:text-ink-50 tracking-tight">Andrés Smerkin</span>
+        </a>
+        <nav class="flex items-center gap-5" aria-label="Main navigation">
+            <a href="/" class="nav-link">blog</a>
+            <a href="/projects" class="nav-link">projects</a>
+            <button id="dark-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
+                </svg>
+                <svg class="w-[18px] h-[18px] hidden dark:block" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/>
+                </svg>
+            </button>
+        </nav>
+    </div>
+    <div class="h-px bg-ink-200/60 dark:bg-ink-800/60"></div>
+</header>
+        <main class="flex-1">
+            <div id="reading-progress" class="reading-progress" style="width: 0%"></div>
+
+<article class="max-w-2xl mx-auto px-6 pt-12 pb-24 sm:pt-20">
+    <header class="mb-14 fade-up">
+        <a href="/" class="inline-flex items-center gap-1.5 font-mono text-xs text-ink-400 dark:text-ink-500 hover:text-amber-600 dark:hover:text-amber-400 transition-colors tracking-wide uppercase mb-8">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+            back
+        </a>
+
+        
+        <h1 class="font-display text-4xl sm:text-5xl text-ink-900 dark:text-ink-50 tracking-tight leading-[1.1]">
+            Why not to make Gnome look like MacOS?
+        </h1>
+
+        <div class="flex items-center gap-3 mt-6 font-mono text-sm text-ink-400 dark:text-ink-500 tracking-wide">
+            <img
+                src="https://www.gravatar.com/avatar/e51e26e998269c10eb92bf36e9cd61d5?s=48"
+                alt="Andrés Smerkin"
+                class="w-6 h-6 rounded-full"
+            >
+            <span>Andrés Smerkin</span>
+            <span class="text-ink-300 dark:text-ink-700">/</span>
+            <time>Feb 28, 2021</time>
+        </div>
+    </header>
+
+    <div class="prose prose-lg dark:prose-invert max-w-none fade-up fade-up-delay-1">
+        <p>After a few years of actively using MacOS (and the entire ecosystem, including iPhone, iPad, AirPods, etc.) I came back to use Linux as my default system. I first installed Fedora on my main Desktop computer. I later installed Archlinux (my favorite) on another small PC I own. I still have all my Apple stuff, including a Macbook Pro 2020 with an m1 chip.</p>
+
+<p>I switched to the Apple ecosystem around five years ago, and before, I had a couple years running Windows 7 and 8. Then a Macbook was given to me in the job I had back then. Honestly, I have to say that MacOS is fantastic. It is a very polished system that just works. In those 5 years, I barely did any maintenance to the Macbooks I used (despite that in 2020, I had a few issues, like a swollen battery, a charger issue, but those were just by use).</p>
+
+<p>But before buying the last MacBook (the one with the m1 chip), I switched to Fedora in my main machine. Before all this change to proprietary software, I was using Archlinux with XFCE. I switched to this Desktop environment because I didn't like Gnome 3 when it was launched. XFCE worked pretty well for me, but this time I wanted something different. I found that Gnome Shell is now a very mature desktop environment that just works (like the Macbook). Fedora comes with Gnome out of the box, so I just used it.</p>
+
+<p>The thing is: Gnome is super simple to use. You need just a few shortcuts to move around desktops, open apps, navigate through them, etc. The aspect is excellent, and it is super easy to use. But I see a bunch of guys posting tutorials on the internet about making Gnome look like macOS Big Sur, and I think, "This doesn't make any sense." Trying to make Gnome be like Bigsur is nonsense because both desktops are meant to be used differently. And I think Gnome does it great, primarily when you work using shortcuts.</p>
+
+<p>Please, understand me. Apple did it great, and MacOS works perfectly for people that use the keyboard to access features, but so does Gnome, so there is no point in making one look like the other. I think it is more beneficial to learn to use them rather than convert one desktop environment to another.</p>
+
+<p>So my conclusion here is that instead of customizing Gnome to look like Big Sur, you should put that effort into learning how to squeeze Gnome to get the most of it. It works really great, it is super simple to use, and, in my opinion, the workflow is way faster than macOS.</p>
+    </div>
+
+    
+    <footer class="mt-20 pt-8 border-t border-ink-200 dark:border-ink-800 fade-up fade-up-delay-2">
+        <a href="/" class="inline-flex items-center gap-2 font-mono text-sm text-ink-400 dark:text-ink-500 hover:text-amber-600 dark:hover:text-amber-400 transition-colors tracking-wide">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+            All articles
+        </a>
+    </footer>
+</article>
+        </main>
+        <footer class="border-t border-ink-200/60 dark:border-ink-800/60">
+    <div class="max-w-2xl mx-auto px-6 py-10">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="font-mono text-xs text-ink-400 dark:text-ink-500 tracking-wide">
+                &copy; 2026 Andrés Smerkin
+            </p>
+            <div class="flex items-center gap-4">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" class="font-mono text-xs text-ink-400 dark:text-ink-500 hover:text-amber-600 dark:hover:text-amber-400 transition-colors tracking-wide">
+                    CC BY 4.0
+                </a>
+                <span class="text-ink-300 dark:text-ink-700">|</span>
+                <a href="https://github.com/asmerkin" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-ink-400 dark:text-ink-500 hover:text-amber-600 dark:hover:text-amber-400 transition-colors tracking-wide">
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+    </body>
+</html>
