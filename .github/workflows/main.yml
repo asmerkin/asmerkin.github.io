@@ -1,5 +1,3 @@
-# Learn more at https://maxkostinevich.com/blog/deploy-jigsaw-using-github-actions
-
 name: Deploy
 
 on:
@@ -9,18 +7,17 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
-        node-version: '12'
+        node-version: '18'
     - name: Install NPM Dependencies
       run: npm install
     - name: Install Composer Dependencies
-      run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Build website
       run: npm run prod
     - name: Prepare production
