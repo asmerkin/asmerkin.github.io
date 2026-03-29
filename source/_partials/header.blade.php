@@ -10,6 +10,7 @@
         </a>
         <nav class="flex items-center gap-5" aria-label="Main navigation">
             <a href="/" class="nav-link">blog</a>
+            <a href="/projects" class="nav-link">projects</a>
             <button id="dark-toggle" class="theme-toggle" aria-label="Toggle dark mode">
                 <svg class="w-[18px] h-[18px] block dark:hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>

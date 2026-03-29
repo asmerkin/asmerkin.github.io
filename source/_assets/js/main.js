@@ -1,22 +1,39 @@
+// Highlight.js theme switching
+function syncHljsTheme(dark) {
+    const light = document.getElementById('hljs-light');
+    const darkSheet = document.getElementById('hljs-dark');
+    if (light && darkSheet) {
+        light.disabled = dark;
+        darkSheet.disabled = !dark;
+    }
+}
+
 // Dark mode toggle
 const toggle = document.getElementById('dark-toggle');
 
 function applyTheme(dark) {
     document.documentElement.classList.toggle('dark', dark);
     localStorage.setItem('theme', dark ? 'dark' : 'light');
+    syncHljsTheme(dark);
 }
 
 const stored = localStorage.getItem('theme');
-if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    applyTheme(true);
-}
+const isDark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
+applyTheme(isDark);
 
 if (toggle) {
     toggle.addEventListener('click', () => {
-        const isDark = document.documentElement.classList.contains('dark');
-        applyTheme(!isDark);
+        const dark = document.documentElement.classList.contains('dark');
+        applyTheme(!dark);
     });
 }
+
+// Initialize highlight.js when loaded
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof hljs !== 'undefined') {
+        hljs.highlightAll();
+    }
+});
 
 // Reading progress bar (article pages only)
 const progressBar = document.getElementById('reading-progress');
