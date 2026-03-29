@@ -1,22 +1,14 @@
-<div class="border-t mt-10">
-    <div class="container mx-auto py-2">
-        <div class="md:flex">
-            <div class="md:w-3/4">
-                <p class="mb-1 text-sm text-gray-500">Andrés Smerkin</p>
-                <p class="text-sm text-gray-500">You can use and share whatever you want, but if you do, please share the authority.</p>
-            </div>
-            <div class="md-w-1/4 text-right flex justify-between">
-                <p>
-                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-                        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
-                    </a>
-                </p>
-                
-                <p class="text-sm text-gray-500">
-                    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-                </p>
+<footer class="border-t border-gray-200 dark:border-gray-800 mt-20">
+    <div class="max-w-3xl mx-auto px-6 py-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+                &copy; {{ date('Y') }} Andrés Smerkin
+            </p>
+            <div class="flex items-center gap-2">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" class="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                    CC BY 4.0
+                </a>
             </div>
         </div>
-
     </div>
-</div>
+</footer>
