@@ -5,6 +5,8 @@ section: content
 excerpt: In this article, let me explain to you how to use multiple Facebook pixels natively, without using apps or external services.
 ---
 
+> **Update (2026):** Since this article was written, Shopify introduced [Customer Events and Web Pixels](https://shopify.dev/docs/api/web-pixels-api), the official way to manage tracking pixels. You can now add multiple Facebook (Meta) pixels through the **Meta Sales Channel** or by creating **Custom Pixels** in **Settings > Customer Events** — no theme hacks required. The approach below still works but is no longer recommended, as it relies on modifying `content_for_header` which Shopify may change without notice.
+
 > Be aware that tricks are not officially supported by Shopify, and they might break in any moment. Please use them at your own risk.
 
 Sometimes you will find the need to add more than one Facebook Pixel to your store. This is something that can be accomplished in many ways, like using an app or pasting the Facebook code straight into the theme files, but here's an approach that works very well in Stores, and if you have a **Plus** store, it also works very well in checkouts.
